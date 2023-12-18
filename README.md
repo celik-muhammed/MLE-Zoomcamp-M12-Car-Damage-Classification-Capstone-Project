@@ -2,21 +2,52 @@
 
 ## Introduction
 
-In the insurance industry, processing claims for vehicle damage is a common and essential task. This project focuses on developing a robust and high-performance model for classifying images of damaged cars into different types of damages using computer vision techniques.
-
-## Problem Statement
-
-Insurance companies face challenges in identifying fraudulent claims, especially those exaggerating the extent of damage. The goal of this project is to mitigate financial losses by accurately classifying images and assessing the legitimacy of claims.
+In the insurance industry, processing claims for vehicle damage is a common task.<br>
+With advancements in AI and Computer Vision, settling claims online by uploading damaged car images is now possible.
 
 ## Dataset
 
-We have a dataset of car images labeled with different types of damages:
-1. Crack
-2. Scratch
-3. Tire Flat
-4. Dent
-5. Glass Shatter
-6. Lamp Broken
+> https://www.kaggle.com/datasets/imnandini/analytics-vidya-ripik-ai-hackfest
+>> Training set (`train.zip`)<br>
+>> Test set (`test.zip`)<br>
+>> Sample submission (`sample_submission.csv`)
+
+### Training Dataset
+
+The training set contains a diverse dataset of car images with labels indicating the specific type of damage (e.g., dents, scratches, cracks).<br>
+The `train.csv` file includes the following columns:
+
+- `image_id`: Unique identifier of the image<br>
+- `filename`: Filename of the image<br>
+- `label`: Type of damage present in the car<br>
+  1. Crack
+  2. Scratch
+  3. Tire Flat
+  4. Dent
+  5. Glass Shatter
+  6. Lamp Broken
+
+### Test Dataset
+
+The test set contains only images, and the goal is to predict the type of damage for each image.<br>
+The `test.csv` file includes the following columns:
+
+- `image_id`: Unique identifier of the image
+- `filename`: Filename of the image
+
+## Sample Submission
+
+The solution file must contain predictions for every `image_id` in the test set. It must contain only 2 columns - `image_id` and `label`.<br>
+The solution file format must be similar to that of `sample_submission.csv`. `sample_submission.csv` contains 2 variables:
+
+- `image_id`: Unique identifier of an image
+- `label`: Type of damage present in the car {1:crack, 2:scratch, 3:tire flat, 4:dent, 5:glass shatter, 6:lamp broken}
+
+## Evaluation Metric
+
+The model will be evaluated based on the macro F1 score.
+
+---
 
 ## Project Structure
 
@@ -38,8 +69,11 @@ The project is organized into CRISP-DM phases for effective development and docu
 
 ### Project Name
 
-- **Project Notebook:** [Car_Damage_Multi_Class_Classification.ipynb](path/to/your/notebook.ipynb)
-- **GitHub Repo:** [Car Damage Classification Capstone Project](https://github.com/yourusername/multiclass-classification)
+- **GitHub Repo:** [Car Damage Image Classification Capstone Project](https://github.com/yourusername/multiclass-classification)
+- **Project Notebook:** [Car_Damage Image_Multi_Class_Classification.ipynb](path/to/your/notebook.ipynb)
+
+### Problem Statement
+Identifying fraudulent claims, especially those exaggerating damage, poses a challenge. The goal is to develop a high-performance model for automatic car damage classification, enabling insurance companies to assess claim legitimacy accurately.
 
 ### Objective
 
